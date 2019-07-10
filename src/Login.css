@@ -1,3 +1,4 @@
+@media screen and (min-width:800px) {
 body{
     margin: 0;
     padding: 0;
@@ -5,8 +6,8 @@ body{
     background: #fff;
 }
 .lcontainer{
-    margin: 7% 10% 5% 10%;
-}
+    margin: 7% 30% 5% 30%; 
+} 
 .logcontainer3{
     margin: auto;
     text-align: center;
@@ -24,6 +25,15 @@ textarea[type="text1"]::placeholder{
     height: 6%;
 }
   input[type=logintext], select {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=password], select {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -50,20 +60,77 @@ textarea[type="text1"]::placeholder{
       display: flex;
       flex-direction: row;
       font-size: 20px;
-      margin-left: 35%;
+      margin-left: 19%;
   }
+  /* .fylo {
+    font-size: 20px;
+    margin-left: 19%;
+} */
+}
   
-  
-@media not screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
+    body{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        background: #fff;
+    }
     .lcontainer {
-        margin-left: 30%;
-        margin-right: 30%;
+        margin-left: 2%;
+        margin-right: 2%;
     }
-    .icons{
-        margin-left: 30%;
+    .logcontainer3{
+        margin: auto;
+        text-align: center;
     }
-    .nav-link  {
-        text-decoration: none;
-        color: black;
+    .data1 {
+        margin-bottom: 8%;
     }
+    textarea[type="text1"]::placeholder{
+        text-align: left;
+        font-size: 20px;
+        font-style: inherit;
+    }
+    .lmail{
+        border-radius:2px;
+        height: 6%;
+    }
+      input[type=logintext], select {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=password], select {
+        width: 70%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[id=userlogin] {
+        width: 30%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        align-content: center;
+      }
+      input[id=userlogin]:hover {
+        background-color: #45a049;
+      }
+      .Noaccount {
+          display: flex;
+          flex-direction: row;
+          font-size: 20px;
+          margin-left: 15%;
+      }
 }

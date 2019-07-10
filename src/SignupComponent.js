@@ -105,10 +105,10 @@ import {
                 <p style={{color: 'blue'}}>Sign in</p>
                 </Link>
             </div>
-            <div className="fylo">
+            {/* <div className="fylo">
                 <p className="style">&#8592; All sign in option 
                 </p>
-            </div>
+            </div> */}
         </div>
         </div>
         );

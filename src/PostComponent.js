@@ -143,6 +143,7 @@ import HeaderComponent from './HeaderComponent';
                 <p>
                     <h4>Add tags so readers know what your story is about</h4>
                     <input type="text" name="tag" onChange={this.handleCommentdataChange} placeholder="select a tag" />
+                    <p style={{color: "grey"}}>( ONEZERO, HEATED, TECH, STARTUPS, SELF, POLITICS, HEALTH, DESIGN, HUMAN PARTS, MORE)</p>
                 </p>
                 <p>
                    <input className="submitreplypost" id="submitreplypost" type="submit" value="Publish Now" />

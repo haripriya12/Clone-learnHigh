@@ -77,7 +77,7 @@ import {
                 <input type="logintext" id="email" onChange={this.handleCommentdataChange} name="email" pattern=".+@gmail.com" required placeholder="sign in with your email" />
                 </p>
                 <p>
-                <input type="logintext" id="password" onChange={this.handleCommentdataChange} name="password" minLength="4" maxLength="8" required placeholder="enter password" />
+                <input type="password" id="password" onChange={this.handleCommentdataChange} name="password" minLength="4" maxLength="8" required placeholder="enter password" />
                 </p>
                 <p>
                     {/* <Link className="nav-link" to="/"> */}
@@ -93,10 +93,10 @@ import {
                 <p style={{color: 'blue'}}>Create One</p>
                 </Link>
             </div>
-            <div className="fylo">
+            {/* <div className="fylo">
                 <p className="style">&#8592; All sign in option 
                 </p>
-            </div>
+            </div> */}
         </div>
         </div>
         );

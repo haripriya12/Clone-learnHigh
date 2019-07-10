@@ -41,6 +41,7 @@ import {
       } else {
         document.getElementById('Signin').innerHTML = "Sign in"
         document.getElementById("welcome").style.display="none"
+        this.setState({redirect: false})
       }
      
     }
