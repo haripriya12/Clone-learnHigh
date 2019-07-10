@@ -45,11 +45,11 @@ import {
                     alert('Enter correct email and passsword');
                     window.localStorage.setItem("isLoggedIn",false)
                 } else {
-                    this.setState({redirect: true})
                     window.localStorage.setItem("isLoggedIn",true)
                     window.localStorage.setItem("userName",res.data[0].userName)
                     window.localStorage.setItem("userid",res.data[0].id)
                     window.localStorage.setItem("image",res.data[0].image)
+                    this.setState({redirect: true})
                 }
             });
     }

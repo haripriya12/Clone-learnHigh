@@ -34,8 +34,8 @@ import {
 
     componentDidMount() {
      // this.fetch();
-      var userName = window.localStorage.getItem("isLoggedIn");
-      if(userName === "true" || userName !== null ) {
+      var isLoggedIn = window.localStorage.getItem("isLoggedIn");
+      if(isLoggedIn === "true" || isLoggedIn !== null ) {
         document.getElementById('Signin').innerHTML = "Sign out"
         document.getElementById("welcome").innerHTML= "Welcome"+ " "+ window.localStorage.getItem("userName");
       } else {
@@ -44,6 +44,22 @@ import {
       }
      
     }
+
+
+  //   fetch() {
+  //     var url = `https://medium.learnhigh.ml/users/posts`;
+
+  //     axios.get(url)
+  //         .then((response) => {
+  //             // console.log(response)
+  //             this.setState({
+  //                 data: response.data.data
+  //             });
+  //         }).catch((e) => {
+  //             alert(e)
+  //         });
+  // }
+
 
 
         

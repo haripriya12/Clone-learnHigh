@@ -14,7 +14,7 @@ import HeaderComponent from './HeaderComponent';
 
  class HomeComponent extends Component {
 
-  constructor() {
+  constructor() { 
     super();
     this.state = {
       data: []
