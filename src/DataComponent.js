@@ -102,7 +102,7 @@ class DataComponent extends Component {
                         <textarea type="text" className="textbox" name="commentData" onChange={this.handleCommentdataChange} type="text" id="mytext" rows="6" cols="55" placeholder="&#128172; Write a response" />
 
                     </div>
-                    <input className="submitreplycom" id="submitreplycom" type="submit" value="Publish Commenconsole.log('comment created', res)t" />
+                    <input className="submitreplycom" id="submitreplycom" type="submit" value="Publish your comment" />
                 </form>
                 <div className="dline3">
                     <h3>Conversations......</h3>

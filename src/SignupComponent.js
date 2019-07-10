@@ -82,6 +82,7 @@ import {
                 {/* <form action={`http://localhost:3000/users/signup`} method="post"> */}
                 <form onSubmit={this.handleSubmit} method="post">
                 <p>
+                   
                 <input type="logintext" id="Username"  onChange={this.handleCommentdataChange} name="userName" required placeholder="Enter Username" />
                 </p>
                 <p>
