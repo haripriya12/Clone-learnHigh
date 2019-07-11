@@ -70,11 +70,11 @@ import {
         return(
             <div className="lcontainer">
         <div className="logcontainer3">
-            <h1>Join Medium.</h1>
+            <h1>Join learnHigh.</h1>
             <div className="data1">
                 <h3>Create an account to receive great stories in your inbox,
                     personalize your homepage, and follow authors and topics 
-                    that you love.
+                    that you love and share your stories too.
                 </h3>
             </div>
             <div className="mail">
@@ -89,7 +89,7 @@ import {
                 <input type="logintext" id="email"  onChange={this.handleCommentdataChange} name="email" pattern=".+@gmail.com" required placeholder="sign in with your email" />
                 </p>
                 <p>
-                <input type="logintext" id="password"  onChange={this.handleCommentdataChange} name="password" minLength="4" maxLength="19" placeholder="enter password" />
+                <input type="password" id="password"  onChange={this.handleCommentdataChange} name="password" minLength="4" maxLength="19" placeholder="enter password" />
                 </p>
                 <p>
                 <input type="logintext" id="image"  onChange={this.handleCommentdataChange} name="image" placeholder="upload image" />
