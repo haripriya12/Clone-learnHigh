@@ -3,7 +3,7 @@ import './data.css';
 import axios from 'axios';
 // import { Redirect } from 'react-router';
 import HeaderComponent from './HeaderComponent';
-class DataComponent extends Component {
+class DataComponent extends Component { 
 
     constructor(props) {
         super(props);
@@ -163,9 +163,7 @@ class Comment extends Component {
 
     render() {
         var Date = this.props.comment.createdAt
-        Date = Date.slice(0, 10)
-        // console.log(this.props.comment,"................")
-        // console.log(this.props.comment.user.userName,"................")
+        Date = Date.slice(0, 10)    
         return (
             <div className="d1container">
                 
@@ -185,7 +183,7 @@ class Comment extends Component {
                     </div>
                     <div className="dreply">
                         <div className="dclaps">
-                            <p>&#128079;</p>
+                            <p>&#x1f44f;</p>
                         </div>
                         <div className="dresponse">
                             <i class="far fa-bookmark"></i>

@@ -98,9 +98,9 @@
     }
     input[id=submitreply] {
         width: 100%;
-        border: 1px solid rgb(60, 61, 60);
-        color: black;
-        font-size: 20px;
+        border: 1px solid rgb(1, 196, 1);
+        color: rgb(54, 206, 8);
+        font-size: 23px;
         padding: 14px 20px;
         margin: 8px 0;
         border-width: 50%;
@@ -112,7 +112,7 @@
         border: 2px solid rgb(218, 224, 218);
       }
     }
-    
+     
     @media screen and (max-width:800px) {
         body{
             margin: 0;

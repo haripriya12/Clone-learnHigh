@@ -15,9 +15,10 @@ class PageComponent extends Component {
             id: this.props.post.location.state.p,
             data: [{
                 title: "...",
-                titleDescription: "...",
+                titleDescription: "...", 
                 authorName: "...",
                 postDescription: "...",
+                subDomain: "...",
                 createdAt: "...",
                 user: {
                     email: "..."
@@ -81,18 +82,18 @@ class PageComponent extends Component {
                 </div>
                 <div className="psecond">
                         <div className="pb1">
-                            <h1>Case Study: {this.state.data[0].title}</h1>
+                            <h1>Case Study: {this.state.data[0].titleDescription}</h1>
                         </div>
-                        <div className="pb2">
+                        {/* <div className="pb2">
                             {this.state.data[0].titleDescription}
-                        </div> <br></br>
+                        </div> <br></br> */} <br></br>
                         <div className="profilepage"> 
                              {/* <img src={require('./images/david.jpeg')} className="pimagestyle" alt={require('./images/david.jpeg')} /> */}
                              <img src={this.state.data[0].user.image} className="pimagestyle" />
                             <div className="pagename" id="post1">
                             <div className="ppname" id="post1">
                             <Link className="nav-link" to={{pathname:'/comment', state: {p:this.state.data[0].id}}}>
-                                 <h3>{this.state.data[0].user.userName}</h3>
+                                 <h3>{this.state.data[0].user.userName} In {this.state.data[0].subDomain}</h3>
                             </Link>
                             </div>
                             <p>{publishdate} . {this.state.data[0].readTime} min read</p>
@@ -115,35 +116,7 @@ class PageComponent extends Component {
         );
     }
 }
-  
-// class Post extends Component {
-//     constructor(props) {
-//         super(props);
-//     }
-
-//     render() {
-//         var publishdate = this.props.post.createdAt;
-//         publishdate = publishdate.slice(0, 10);
-//         return (
-//             <div class="pcontainer">
-//                 <div className="profilepage">
-//                     <img src={require('./images/david.jpeg')} className="pimagestyle" alt="avatar" />
-//                     <div className="dp">
-//                     <div className="ppname" id="post1">
-//                     <Link className="nav-link" to={{pathname:'/comment', state: {p:this.props.post.id}}}>
-//                         <h3>{this.props.post.authorName}</h3>
-//                     </Link>
-//                     </div>
-//                 <div>
-//                     <h4>{publishdate} . {this.props.post.readTime}</h4>
-//                 </div>
-//                 </div>
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-
+ 
 
 export default PageComponent;
 
