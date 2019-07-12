@@ -17,28 +17,26 @@ import SignupComponent from './SignupComponent';
 
 class App extends Component {
 
-  componentDidMount() {
-    // this.fetch();
-     var userName = window.localStorage.getItem("isLoggedIn");
-     if(userName === "true" || userName !== null ) {
-       document.getElementById('Signin').innerHTML = "Sign out"
-       document.getElementById("welcome").innerHTML= "Welcome"+ " "+ window.localStorage.getItem("userName");
-     } else {
-       document.getElementById('Signin').innerHTML = "Sign in"
-       document.getElementById("welcome").style.display="none"
-     }
+  // componentDidMount() {
+  //   // this.fetch();
+  //    var userName = window.localStorage.getItem("isLoggedIn");
+  //    if(userName === "true" || userName !== null ) {
+  //      document.getElementById('Signin').innerHTML = "Sign out"
+  //      document.getElementById("welcome").innerHTML= "Welcome"+ " "+ window.localStorage.getItem("userName");
+  //    } else {
+  //      document.getElementById('Signin').innerHTML = "Sign in"
+  //      document.getElementById("welcome").style.display="none"
+  //    }
     
-   }
+  //  } 
 
 
   render() {
     return (
       <Router>
         <div>
-          {/* <HomeComponent></HomeComponent> */}
           <Switch> 
           <Route exact path='/' component={HomeComponent}></Route>
-          {/* <Route exact path='/tag' component={HomeComponent}></Route> */}
           <Route exact path='/login' component={LoginComponent}></Route>
           <Route exact path='/signup' component={SignupComponent}></Route>
           <Route exact path='/post' component={PostComponent}></Route>

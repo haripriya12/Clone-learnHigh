@@ -62,35 +62,9 @@ import HeaderComponent from './HeaderComponent';
         return(
         <div className="container">
         <div className="container1">
-        {/* <div className="Hmain-container">
-          <div className="det1">
-            <div className="img1">
-              <img src={require('./images/learnhigh.jpeg')} style={{color: 'black'}} alt="avatar" />
-            </div>
-            <div className="logo" style={{fontSize: '130%', fontStretch: 'ultra-condensed', fontFamily: 'italic', width: '60%'}}>
-                <h1>learnHigh</h1>
-            </div>
-          </div>
-          <div className="det">
-              
-            <div className="mem">
-                <a href="#">Become a Member</a> 
-            </div> &nbsp;&nbsp;&nbsp;
-            <div className="login-form">
-            <Link className="nav-link" to='/login'>
-                <a style={{color: 'green', textDecorationLine: 'none'}} >Sign in</a> 
-            </Link>  
-            </div> &nbsp;&nbsp;&nbsp;
-            <div className="login-form1">
-            <Link className="nav-link" to='/post'>         
-                <a style={{color: 'green', textDecorationLine: 'none'}} className="rect">Add Post</a>
-            </Link>
-            </div>
-          </div>
-             
-            
-        </div>   */}
-        <HeaderComponent></HeaderComponent>
+          
+         <HeaderComponent></HeaderComponent>
+
         <div className="tags">
             <Link to="/">
             <a style={{color: 'black'}} onClick={()=>this.fetch()}>HOME</a>
@@ -167,13 +141,15 @@ import HeaderComponent from './HeaderComponent';
      
             <div className="para">
             <Link className="nav-link" to={{ pathname: '/singlepage', state: { p:this.props.post.id} }} >
-                {/* <Link className="nav-link" to='/singlepage' params={{value: this.props.post.id}}> */}
-                <div className="mainb">
-                    <h1>{this.props.post.titleDescription}</h1>
+            <div className="mainb">
+                    <h1>{this.props.post.title}</h1>
                 </div>
                 <div className="b1">
-                    <p>{this.props.post.postDescription}</p>
-                </div> <br/>
+                    <p>{this.props.post.titleDescription}</p>
+                </div>
+                {/* <div className="b1">
+                <p dangerouslySetInnerHTML={{ __html: this.props.post.postDescription }} />
+                </div> <br/> */}
                 </Link>
                 
                 <div className="new">

@@ -2,17 +2,20 @@ import React, {Component} from 'react';
 import './Post.css';
 import axios from 'axios';
 import { Redirect } from 'react-router';
+import ReactQuill from 'react-quill';
 import {
     BrowserRouter as Router,
     Route,
     Link,
     Switch
   } from 'react-router-dom';
+import 'react-quill/dist/quill.snow.css';
+import 'react-quill/dist/quill.bubble.css';
 import HeaderComponent from './HeaderComponent';
  class PostComponent extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             redirect: false,
             data: [{
@@ -26,15 +29,52 @@ import HeaderComponent from './HeaderComponent';
             }]
 
         }
-    }
 
+        this.handlePostChange= this.handlePostChange.bind(this);
+        this.modules = {
+            toolbar: [
+                [{ 'font': [] }],
+                [{ 'size': ['small', false, 'large', 'huge'] }],
+                ['bold', 'italic', 'underline'],
+                [{'list': 'ordered'}, {'list': 'bullet'}],
+                [{ 'align': [] }],
+                [{ 'color': [] }, { 'background': [] }],
+                ['clean']
+              ]
+          };
+
+          this.formats = [
+            'font',
+            'size',
+            'bold', 'italic', 'underline',
+            'list', 'bullet',
+            'align',
+            'color', 'background'
+          ];
+ 
+
+    }
+ 
     handleCommentdataChange = e => {
         this.setState({
             [e.target.name]: e.target.value,
         });
     };
 
+    // handlePostChange = e => {
+    //     this.setState({
+    //         [e.target.name]: e.target.value,
+    //     });
+    // };
+
+    handlePostChange(name,delta,source,editor)
+    {
+      this.setState({postDescription:name})
+    }
+  
+
     handleSubmit = e =>{
+        console.log("fghhcikd")
         e.preventDefault();
         // var form = e.target;
         const { title, titleDescription, subDomain, readTime,  postDescription, tag} = this.state;
@@ -54,44 +94,10 @@ import HeaderComponent from './HeaderComponent';
             .post('https://medium.learnhigh.ml/users/post',post)
             .then( ()=> this.setState({redirect: true}));
             
-            // .then((res) => {
-            //     console.log('comment created', res)
-            //     let obj = {}
-            //     obj.title= res.data.title
-            //     obj.titleDescription= res.data.titleDescription
-            //     obj.authorName= res.data.authorName
-            //     obj.readTime= res.data.readTime
-            //     obj.postDescription= res.state.postDescription
-            //     obj.tag= res.data.tag
-            //     this.setState({
-            //         ...this.state,
-            //         data: [...this.state.data, obj]
-                    
-            //     }) 
-            // })
-            // .catch((e) => {
-            //     alert(e)
-            // });
-
-            // form.reset('http://localhost:3001');
         } else {
             alert('please sign in first');
         }
     }
-
-    showMenu(event) {
-        event.preventDefault();
-        this.setState({ showMenu: true }, () => {
-            document.addEventListener('click', this.closeMenu);
-        });
-    }
-
-    closeMenu() {
-        this.setState({ showMenu: false }, () => {
-          document.removeEventListener('click', this.closeMenu);
-        });
-    }
-
 
       render() { 
         const { redirect } = this.state;
@@ -117,12 +123,14 @@ import HeaderComponent from './HeaderComponent';
             <div className="posticons">
 
             </div>
+            
         </div>
         <div className="postcontainer2">
             <div className="postdes">
                 <p>
-                    <h2>Story Preview</h2>
-                    <textarea typep="text" name="postDescription" onChange={this.handleCommentdataChange} rows="13" placeholder="&#10753;  Tell your story..." />
+                    <h2>Story Preview</h2> 
+                    {/* <textarea typep="text" id="p_wrap" name="postDescription" onChange={this.handleCommentdataChange} rows="13" placeholder="&#10753;  Tell your story..." /> */}
+                    <ReactQuill theme="snow" modules={this.modules} formats={this.formats} name="PostDescription" onChange={this.handlePostChange} />
                 </p><br></br>
                 <p>
                     <h4>Give a title to your story</h4>

@@ -59,9 +59,6 @@ class PageComponent extends Component {
         //var ID = this.props.post.location.state.p;
         var publishdate = this.state.data[0].createdAt;
         publishdate = publishdate.slice(0, 10); 
-        // console.log(this.props.post.location.state.p)
-        // console.log(this.state)
-       // var allposts = this.state.data.map(post => <Post key={post.id} post={post} />);
         return (
             <div className="pcontainer">
                 <div className="pfirst">
@@ -103,7 +100,8 @@ class PageComponent extends Component {
                 </div> <br />
                 <div className="pthird">
                     <div className="p">
-                       {this.state.data[0].postDescription}
+                       {/* {this.state.data[0].postDescription} */}
+                       <p dangerouslySetInnerHTML={{ __html: this.state.data[0].postDescription }} />
                     </div>
                 </div>
                 <div className="viewRes">
