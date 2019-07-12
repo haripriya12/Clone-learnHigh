@@ -79,7 +79,7 @@ class PageComponent extends Component {
                 </div>
                 <div className="psecond">
                         <div className="pb1">
-                            <h1>Case Study: {this.state.data[0].titleDescription}</h1>
+                            <p>Case Study: {this.state.data[0].titleDescription}</p>
                         </div>
                         {/* <div className="pb2">
                             {this.state.data[0].titleDescription}
